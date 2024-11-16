@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "./components/header";
+import Header from "./components/Header";
 import GenshinPage from "./components/GenshinPage";
 import GenshinCard from "./components/GenshinCard";
 
