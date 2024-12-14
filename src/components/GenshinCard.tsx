@@ -30,12 +30,16 @@ const GenshinCard: React.FC<GenshinCardProps> = ({ characterId, onClose }) => {
         Cerrar
       </button>
 
-      {/* Imagen pequeña */}
+      {/* Imagen del personaje con tamaño dinámico */}
       <div className="flex justify-center">
         <img
-          src={getCharacterImage(characterId, "card")}
-          alt={character.name}
-          className="w-32 h-32 object-cover rounded-full"
+          src={getCharacterImage(characterId, "card")} // URL generada por la API
+          alt={character.name} // Texto alternativo basado en el nombre del personaje
+          className="rounded-lg shadow" // Estilo: bordes redondeados y sombra
+          style={{
+            maxWidth: "100%", // Asegura que la imagen no sobrepase el contenedor
+            height: "auto", // Mantiene la proporción de la imagen
+          }}
         />
       </div>
 
